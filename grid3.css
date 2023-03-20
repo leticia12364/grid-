@@ -10,7 +10,12 @@ main{
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15vw 70vw 15vw;
+    grid-template-rows:15vw 70vw 15vw;
+    grid-template-areas: 
+    "m h h"
+    "m c c"
+    "m f f";
+    grid-gap: 5px 10px;
 }
 
 header, nav, article ,footer {
@@ -24,20 +29,20 @@ header, nav, article ,footer {
 
 header {
     background-color: rgb(108, 129, 129);
-    grid-column: span 3;
+    grid-area: h;
 }
 
 nav{
     background-color: rgb(77, 105, 105);
-    grid-column: span 1;
+    grid-area: m;
 }
 
 article{
     background-color: rgb(167, 209, 209);
-    grid-column: span 2;
+    grid-area: c;
 }
 
 footer{
     background-color: rgb(93, 139, 139);
-    grid-column: span 3;
+    grid-area: f;
 }
